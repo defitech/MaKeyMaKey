@@ -4,7 +4,7 @@
 /////////////////////////////////////////////////////////////////////////
 // KEY MAPPINGS: WHICH KEY MAPS TO WHICH PIN ON THE MAKEY MAKEY BOARD? //
 /////////////////////////////////////////////////////////////////////////
-  
+    
   - edit the keyCodes array below to change the keys sent by the MaKey MaKey for each input
   - the comments tell you which input sends that key (for example, by default 'w' is sent by pin D5)
   - change the keys by replacing them. for example, you can replace 'w' with any other individual letter,
@@ -21,8 +21,8 @@ int keyCodes[NUM_INPUTS] = {
   KEY_DOWN_ARROW,    // down arrow pad
   KEY_LEFT_ARROW,    // left arrow pad
   KEY_RIGHT_ARROW,   // right arrow pad
-  ' ',               // space button pad
-  MOUSE_LEFT,        // click button pad
+  KEY_LEFT_ALT,               // space button pad
+  KEY_DOWN_ARROW,        // click button pad
   
   // female header on the back left side
   
@@ -35,8 +35,8 @@ int keyCodes[NUM_INPUTS] = {
   
   // female header on the back right side
   
-  MOUSE_MOVE_UP,      // pin A5
-  MOUSE_MOVE_DOWN,    // pin A4
+  KEY_LEFT_ALT,      // pin A5
+  'h',    // pin A4
   MOUSE_MOVE_LEFT,    // pin A3
   MOUSE_MOVE_RIGHT,   // pin A2
   MOUSE_LEFT,         // pin A1

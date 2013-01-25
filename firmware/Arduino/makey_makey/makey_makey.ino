@@ -240,7 +240,7 @@ void initializeInputs() {
 // UPDATE MEASUREMENT BUFFERS
 //////////////////////////////
 void updateMeasurementBuffers() {
-
+  
   for (int i=0; i<NUM_INPUTS; i++) {
 
     // store the oldest measurement, which is the one at the current index,
@@ -313,6 +313,8 @@ void updateInputStates() {
         inputs[i].pressed = false;
         if (inputs[i].isKey) {
           Keyboard.release(inputs[i].keyCode);
+          if (i == 5) {Keyboard.release(inputs[0].keyCode);}
+          if (i == 4) {Keyboard.release(inputs[12].keyCode); Keyboard.release(inputs[13].keyCode);}
         }
         if (inputs[i].isMouseMotion) {  
           mouseHoldCount[i] = 0;  // input becomes released, reset mouse hold
@@ -328,6 +330,8 @@ void updateInputStates() {
         inputs[i].pressed = true; 
         if (inputs[i].isKey) {
           Keyboard.press(inputs[i].keyCode);
+          if (i == 5) {Keyboard.press(inputs[0].keyCode);}   //added to be able to "select the highlighted item" on th ipad
+          if (i == 4) {Keyboard.press(inputs[12].keyCode); Keyboard.press(inputs[13].keyCode);}
         }
       }
     }
@@ -338,7 +342,6 @@ void updateInputStates() {
   }
 #endif
 }
-
 /*
 ///////////////////////////
  // SEND KEY EVENTS (obsolete, used in versions with pro micro bootloader)
