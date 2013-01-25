@@ -16,7 +16,8 @@
 ** SOFTWARE.  
 */
 
-#define CDC_ENABLED
+//with CDC disabled, the device is supported by the iPad, but it isn't recognized by the Arduino software, so you have to reset the arduino just after compilation has started
+//#define CDC_ENABLED
 #define HID_ENABLED
 
 
