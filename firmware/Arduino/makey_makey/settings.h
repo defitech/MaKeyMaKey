@@ -35,7 +35,7 @@ int keyCodes[NUM_INPUTS] = {
   
   // female header on the back right side
   
-  KEY_LEFT_ALT,      // pin A5
+  KEY_RIGHT_CTRL,      // pin A5
   'h',    // pin A4
   MOUSE_MOVE_LEFT,    // pin A3
   MOUSE_MOVE_RIGHT,   // pin A2

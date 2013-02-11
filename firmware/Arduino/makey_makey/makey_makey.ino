@@ -313,8 +313,8 @@ void updateInputStates() {
         inputs[i].pressed = false;
         if (inputs[i].isKey) {
           Keyboard.release(inputs[i].keyCode);
-          if (i == 5) {Keyboard.release(inputs[0].keyCode);}
-          if (i == 4) {Keyboard.release(inputs[12].keyCode); Keyboard.release(inputs[13].keyCode);}
+          if (i == 5) {Keyboard.release(inputs[0].keyCode);}  //added to be able to "select the highlighted item" on th ipad
+          if (i == 12) {Keyboard.release(inputs[13].keyCode);}  //added to be able for the button "home" on the ipad
         }
         if (inputs[i].isMouseMotion) {  
           mouseHoldCount[i] = 0;  // input becomes released, reset mouse hold
@@ -331,7 +331,7 @@ void updateInputStates() {
         if (inputs[i].isKey) {
           Keyboard.press(inputs[i].keyCode);
           if (i == 5) {Keyboard.press(inputs[0].keyCode);}   //added to be able to "select the highlighted item" on th ipad
-          if (i == 4) {Keyboard.press(inputs[12].keyCode); Keyboard.press(inputs[13].keyCode);}
+          if (i == 12) {Keyboard.press(inputs[13].keyCode);}  //added to be able for the button "home" on the ipad
         }
       }
     }
